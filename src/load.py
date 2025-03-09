@@ -15,6 +15,7 @@ def load(data_frames: Dict[str, DataFrame], database: Engine):
     # usar pandas.DataFrame.to_sql() para cargar el DataFrame en la base de datos
     # como una tabla.
     # Para el nombre de la tabla, utiliza las claves del diccionario `data_frames`.
+<<<<<<< HEAD
     
     with database.connect() as conn:
         for table_name in data_frames.keys():
@@ -31,3 +32,6 @@ def load(data_frames: Dict[str, DataFrame], database: Engine):
             print(f"Tabla '{key}' cargada exitosamente.")
         except Exception as e:
             print(f"Error al cargar la tabla '{key}': {e}")
+=======
+    raise NotImplementedError
+>>>>>>> 499115cb3632de4f9fd7ea9a88447a4c9cfbb4b7

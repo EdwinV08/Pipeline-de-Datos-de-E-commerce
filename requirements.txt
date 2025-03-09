@@ -1,8 +1,14 @@
 black==22.12.0
 db-sqlite3==0.0.1
+<<<<<<< HEAD
 matplotlib==3.9.0
 pandas==1.5.2
 numpy==1.26.4
+=======
+matplotlib==3.6.2
+pandas==1.5.2
+numpy==1.23.5
+>>>>>>> 499115cb3632de4f9fd7ea9a88447a4c9cfbb4b7
 plotly_express==0.4.1
 requests==2.26.0
 seaborn==0.11.2

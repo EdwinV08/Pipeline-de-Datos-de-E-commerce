@@ -29,6 +29,7 @@ def get_public_holidays(public_holidays_url: str, year: str) -> DataFrame:
     # Debes lanzar SystemExit si la solicitud falla. Investiga el método raise_for_status
     # de la biblioteca requests.
 
+<<<<<<< HEAD
     url = f"{public_holidays_url}/{2017}/BR"
 
     try:
@@ -46,6 +47,8 @@ def get_public_holidays(public_holidays_url: str, year: str) -> DataFrame:
 
 
 
+=======
+>>>>>>> 499115cb3632de4f9fd7ea9a88447a4c9cfbb4b7
     raise NotImplementedError
 
 
