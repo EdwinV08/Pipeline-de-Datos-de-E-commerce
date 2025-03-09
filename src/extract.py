@@ -29,6 +29,23 @@ def get_public_holidays(public_holidays_url: str, year: str) -> DataFrame:
     # Debes lanzar SystemExit si la solicitud falla. Investiga el método raise_for_status
     # de la biblioteca requests.
 
+    url = f"{public_holidays_url}/{2017}/BR"
+
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        holidays = response.json()
+    except requests.exceptions.RequestException as e:
+        raise SystemExit(e)
+
+    df = DataFrame(holidays)
+    df.drop(columns=["types", "counties"], inplace=True)
+    df["date"] = to_datetime(df["date"])
+
+    return df
+
+
+
     raise NotImplementedError
 
 
